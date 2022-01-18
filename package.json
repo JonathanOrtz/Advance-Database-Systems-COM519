@@ -1,0 +1,29 @@
+{
+  "name": "Advance-Database-Systems-COM519",
+  "version": "1.0.0",
+  "description": "Project for COM519, WEBAPP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonathanOrtz/Advance-Database-Systems-COM519.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonathanOrtz/Advance-Database-Systems-COM519/issues"
+  },
+  "homepage": "https://github.com/JonathanOrtz/Advance-Database-Systems-COM519#readme",
+  "dependencies": {
+    "dotenv": "^14.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
