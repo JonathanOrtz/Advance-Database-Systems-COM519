@@ -1,15 +1,16 @@
-<div>
+<div class="container">
     <form action="duties/add" method="post">
-      <label for="title">Write the title of the dutie</label>
-      <input type="text" name="title" placeholder="title" id="title" />
-      <label for="detailing">Introduce the details of the dutie</label>
+      <label for="title">Write the title of the Duty</label><br>
+      <input type="text" name="title" placeholder=" Duty Title" id="title" /><br>
+      <label for="detailing">Introduce the details of the duty</label><br>
       <textarea
+      class="form-control"
         name="detailing"
-        placeholder="write your next dutie"
+        placeholder="Write your duty details"
         id="detailing"
-      ></textarea>
-      <div>
-          <button>add</button>
+      ></textarea><br>
+      <div class="container">
+          <button class="btn btn-primary">Add</button>
       </div>
     </form>
   </div>

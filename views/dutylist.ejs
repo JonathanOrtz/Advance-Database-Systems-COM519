@@ -8,6 +8,7 @@
     <title>Duties LIST</title>
   </head>
   <body>
+    <header><%- include('common/header'); -%></header>
     <table class="table">
         <thead>
           <tr>
@@ -24,14 +25,14 @@
             <td><%=dutieslist[i].title %></td>
             <td><%=dutieslist[i].detailing %></td>
             <td>
-                <a href="/update/<%= dutieslist[i]._id %>">UPDATE</a>
-                <a href="/delete/<%= dutieslist[i]._id %>">DELETE</a>
+                <a class="btn btn-primary" href="/update/<%= dutieslist[i]._id %>" role="button">UPDATE</a>
+                <a class="btn btn-primary" href="/delete/<%= dutieslist[i]._id %>" role="button">DELETE</a>
 
 
                 <% if(dutieslist[i].done) { %>
-                <a href="/status/<%= dutieslist[i]._id %>">DONE</a>
+                <a class="btn btn-primary" href="/status/<%= dutieslist[i]._id %>" role="button">DONE</a>
                 <% } else { %>
-                <a href="/status/<%= dutieslist[i]._id %>">NOT DONE</a>
+                <a class="btn btn-primary" href="/status/<%= dutieslist[i]._id %>" role="button">NOT DONE</a>
                 <% } %>
                 
 
