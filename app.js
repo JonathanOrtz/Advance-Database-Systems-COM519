@@ -13,7 +13,7 @@ const app = express();
 app.set("view engine", "ejs");
 
 // using the values in the .env file of dotenv.
-const { WEB_PORT, MONGODB_URI } = process.env;
+const { PORT, MONGODB_URI } = process.env;
 
 // connecting our database
 
