@@ -3,7 +3,7 @@ const Duty = require("../models/Duties");
 exports.list = async (req, res) => {
   try {
     const dutieslist = await Duty.find();
-    console.log(dutieslist);
+    
     res.render("dutylist", { dutieslist: dutieslist });
   } catch (error) {
     res.status(404).send({ message: "could not list the duties." });
@@ -13,7 +13,7 @@ exports.list = async (req, res) => {
 exports.create = async (req, res) => {
   const duty = Duty(req.body);
   const dutySaved = await duty.save();
-  console.log(dutySaved);
+  
   res.redirect("/");
 };
 
