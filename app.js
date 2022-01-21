@@ -8,7 +8,7 @@ const Duty = require("./models/Duties");
 const dutyController = require("./controllers/duty");
 // creating a express object
 const app = express();
-
+const connectDB = require('./connectiondatabase');
 // setting for render ejs files
 app.set("view engine", "ejs");
 
@@ -17,13 +17,13 @@ const { PORT, MONGODB_URI } = process.env;
 
 // connecting our database
 
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
-mongoose.connection.on("error", (err) => {
-  console.error(err);
-  console.log("error connecting to the database");
-  process.exit();
-});
-
+//mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+//mongoose.connection.on("error", (err) => {
+  //console.error(err);
+  //console.log("error connecting to the database");
+  ////process.exit();
+//});
+connectDB();
 // setting express for static files
 app.use(express.static(path.join(__dirname, "public")));
 
