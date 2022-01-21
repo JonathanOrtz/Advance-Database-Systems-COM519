@@ -26,7 +26,16 @@
             <td>
                 <a href="/update/<%= dutieslist[i]._id %>">UPDATE</a>
                 <a href="/delete/<%= dutieslist[i]._id %>">DELETE</a>
-                <button type="button" class="btn btn-primary">DONE</button>
+
+
+                <% if(dutieslist[i].done) { %>
+                <a href="/status/<%= dutieslist[i]._id %>">DONE</a>
+                <% } else { %>
+                <a href="/status/<%= dutieslist[i]._id %>">NOT DONE</a>
+                <% } %>
+                
+
+
             </td>
           </tr>
           <% } %>

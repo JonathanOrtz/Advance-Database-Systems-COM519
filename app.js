@@ -70,7 +70,21 @@ app.post("/update/:id", async(req, res)=>{
     res.redirect("/dutylist")
 })
 
+app.get("/delete/:id", async(req, res)=>{
+    const {id} = req.params;
+    await Duty.findByIdAndDelete(id)
+    res.redirect("/dutylist");
+})
 
+app.get("/status/:id", async(req, res)=>{
+
+    const {id} = req.params;
+    const dutystatus = await Duty.findById(id)
+    dutystatus.done = !dutystatus.done;
+    await dutystatus.save()
+    res.redirect("/dutylist");
+
+})
 
 
 
