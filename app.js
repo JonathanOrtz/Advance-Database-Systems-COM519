@@ -48,6 +48,6 @@ app.get("/delete/:id", dutyController.delete);
 
 app.get("/status/:id", dutyController.dutyStatus);
 
-app.listen(WEB_PORT, () => {
-  console.log(`Web running at http://localhost:${WEB_PORT}`);
+app.listen(PORT, () => {
+  console.log(`Web running at http://localhost:${PORT}`);
 });
