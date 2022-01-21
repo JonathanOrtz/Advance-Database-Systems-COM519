@@ -1,0 +1,10 @@
+<form action="/update/<%= dutyupdate._id %>" method="post">
+  <input
+    type="text"
+    name="title"
+    placeholder="Title"
+    value="<%= dutyupdate.title %>"
+  />
+  <textarea name="detailing" rows="3" placeholder="update your duty"><%= dutyupdate.detailing %></textarea>
+  <button>update</button>
+</form>

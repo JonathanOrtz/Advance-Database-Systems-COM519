@@ -54,9 +54,21 @@ app.post("/duties/add", async(req, res)=>{
     res.redirect("/");
 });
 
+app.get("/update/:id", async(req,res)=>{
+    try{
+        const dutyupdate = await Duty.findById(req.params.id).lean()
+        res.render("update", {dutyupdate: dutyupdate});
+    } catch (error){
+        console.log(error.message);
+    }
+    
+})
 
-
-
+app.post("/update/:id", async(req, res)=>{
+    const {id} = req.params;
+    await Duty.findByIdAndUpdate(id, req.body)
+    res.redirect("/dutylist")
+})
 
 
 
